@@ -1,1 +1,3 @@
+## This is working under MySQL
+
 SELECT count(distinct a.`uid`) AS count_of_user FROM `piwik_track` AS `a` inner join `piwik_track` AS `b` on a.`uid` = b.`uid` and a.time = '2017-04-01' and a.event_name = 'FIRST_INSTALL' and b.time BETWEEN '2017-04-02' and '2017-04-08' and b.event_name != 'FIRST_INSTALL'
